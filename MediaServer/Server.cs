@@ -285,13 +285,12 @@ namespace MediaServer
             }
         }
 
-        //TODO: Finish implementation
+        //TODO: Finish implementation x
         /// <summary>
-        /// This method returns a  webpage contain with a list of media found in the media dir. Each entry on the page must
+        /// This method returns a webpage containing a list of media found in the media dir. Each entry on the page must
         /// be clickable via an anchor tag which shows the name of the media file with its href attribute set to the index
         /// number of the file. Clicking the link must open the media item.
         /// The names of the file must not show the root path to the media dir
-        /// 
         /// </summary>
         /// <param name="handler">The socket to write the webpage to</param>
         private void ReturnList(Socket handler)
@@ -350,7 +349,6 @@ namespace MediaServer
             }
             else
             {
-                //Probably a large file
                 //TODO: ? hint: must use fsHelper
             }
         }
@@ -387,7 +385,6 @@ namespace MediaServer
             while (this.running && handler.Connected && chunkSize > 0)
             {
 			
-				//TODO: You probably want to do something here
             }
             fsFile.Close();
             CloseClientSocket(handler);
@@ -485,4 +482,3 @@ namespace MediaServer
             return Reply + Environment.NewLine;
         }
     }
-}
